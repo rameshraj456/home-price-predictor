@@ -23,7 +23,7 @@ function onClickedEstimatePrice() {
   const location = document.getElementById("uiLocations").value;
   const estPrice = document.getElementById("uiEstimatedPrice");
 
-  const url = "http://127.0.0.1:5000/predict_home_price"; // Flask endpoint
+  const url = "https://realstate-price-predictor.onrender.com/predict_home_price"; // Flask endpoint
 
   const payload = {
     total_sqft: parseFloat(sqft),
@@ -58,7 +58,7 @@ function onClickedEstimatePrice() {
 function onPageLoad() {
   console.log("Document loaded");
 
-  const url = "http://127.0.0.1:5000/get_location_names";
+  const url = "https://realstate-price-predictor.onrender.com/get_location_names";
 
   fetch(url)
     .then(response => response.json())
